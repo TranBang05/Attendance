@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "zMmRuxyGft9hjCoXj2Fp4KN0wIK35QAmya/5hM5AS1E=",
+  "Source": "GrpcAttedance",
+  "BasePath": "_content/GrpcAttedance",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

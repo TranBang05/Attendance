@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option csharp_namespace = "AttendanceApi.Protos";
+
+package subject;
+
+service SubjectRPC{
+	rpc GetSubjects(SubjectRequest) returns (SubjectResponse);
+	rpc CreateSubject(SubjectRequestAdd) returns (MessageReponse);
+	rpc UpdateSubject(SubjectRequestUpdate) returns (MessageReponse);
+	rpc DeleteSubject(SubjectRequest) returns (MessageReponse);
+	rpc GetAllSubjects(Empty) returns (SubjectListResponse);
+}
+
+message Empty {}
+
+message SubjectListResponse {
+    repeated SubjectResponse subjects = 1;
+}
+message SubjectRequest {
+  int32 id = 1;
+}
+
+message SubjectResponse{
+	int32 id=1;
+	string Code=2;
+	string Name =3;
+	int32 NumberSlot=4;
+}
+
+message SubjectRequestAdd{
+	
+	string Code=1;
+	string Name =2;
+	int32 NumberSlot=3;
+}
+
+message MessageReponse {
+  string message = 1;
+}
+
+message SubjectRequestUpdate{
+	int32 id=1;
+	string Code=2;
+	string Name =3;
+	int32 NumberSlot=4;
+}

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "AttendanceApi.Protos";
+
+package role;
+
+service RoleRPC {
+    rpc GetRole(RoleRequest) returns (RoleResponse);
+    
+}
+
+message RoleRequest {
+    int32 id = 1;
+}
+
+message RoleResponse {
+    int32 id = 1;
+    string roleName = 2;
+    repeated StudentRoles studentRoles = 3;
+    repeated RolePermissions rolePermissions = 4;
+}
+
+message StudentRoles {
+    string studentName = 1;
+}
+
+message RolePermissions {
+    string permissionName = 1;
+}

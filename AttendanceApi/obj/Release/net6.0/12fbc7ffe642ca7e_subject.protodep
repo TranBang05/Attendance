@@ -1,0 +1,2 @@
+obj\Release\net6.0\Protos/Subject.cs \
+obj\Release\net6.0\Protos/SubjectGrpc.cs: Protos/subject.proto

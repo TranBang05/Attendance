@@ -1,0 +1,36 @@
+﻿@model AttendanceFe.Protos.SubjectResponse
+
+<h2>Update Subject</h2>
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+@using (Html.BeginForm("Update", "Subject", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(model => model.Id)
+        @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Code)
+        @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.NumberSlot)
+        @Html.EditorFor(model => model.NumberSlot, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    @Html.HiddenFor(model => model.Id) 
+    <button type="submit" class="btn btn-primary">Update</button>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMessage
+    </div>
+}

@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcAttendanceApi.Protos";
+package subject;
+
+
+service SubjectRPC {
+  rpc GetSubjects (SubjectRequest) returns (SubjectResponse);
+}
+
+
+message SubjectRequest {
+  int32 id = 1;
+}
+
+message SubjectResponse {
+  int32 id = 1;
+  string code = 2;
+  string name = 3;
+  int32 numberSlot = 4;
+}

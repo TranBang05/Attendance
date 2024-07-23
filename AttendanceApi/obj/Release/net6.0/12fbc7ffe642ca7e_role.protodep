@@ -1,0 +1,2 @@
+obj\Release\net6.0\Protos/Role.cs \
+obj\Release\net6.0\Protos/RoleGrpc.cs: Protos/role.proto
